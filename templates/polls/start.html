@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <title>แบบสอบถามส่วนที่ 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                แบบสอบถามส่วนที่ 1
+            </h1>
+            <h2 class="subtitle">
+                ข้อมูลทั่วไปทางชีวสังคมของผู้สูงอายุ
+            </h2>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <h1 class="subtitle">
+            กรุณาตอบคำถามตามความเป็นจริงของผู้สูงอายุ
+        </h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <h2>
+                <strong>1. เพศ</strong>
+            </h2>
+            <div class="field">
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="gender" value="ชาย" required>
+                            ชาย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="gender" value="หญิง" required>
+                            หญิง
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="field">
+                <h2><strong>2. อายุ</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="age" value="อายุ 60-65 ปี" required>
+                            อายุ 60-65 ปี
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="age" value="อายุ 66-70 ปี" required>
+                            อายุ 66-70 ปี
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="age" value="อายุ 71-75 ปี" required>
+                            อายุ 71-75 ปี
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="age" value="อายุมากกว่า 75 ปีขึ้นไป" required>
+                            อายุมากกว่า 75 ปีขึ้นไป
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="field">
+                <h2><strong>3. สถานภาพสมรส</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="marriage" value="โสด" required>
+                            โสด
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="marriage" value="สมรส" required>
+                            สมรส
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="marriage" value="ม่าย/หย่า/แยกกันอยู่" required>
+                            ม่าย/หย่า/แยกกันอยู่
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="field">
+                <h2><strong>4.ระดับการศึกษาสูงสุด</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="education" value="ประถมศึกษา" required>
+                            ประถมศึกษา
+                        </label></div>
+                        <div class="column">
+                            <label class="radio">
+                                <input type="radio" name="education" value="มัธยมศึกษา" required>
+                                มัธยมศึกษา
+                            </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="education" value="ระดับปริญญาตรีหรือสูงกว่า" required>
+                            ระดับปริญญาตรีหรือสูงกว่า
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="field">
+                <h2><strong>5. อาศัยอยู่กับ</strong> (ตอบได้มากกว่า 1 คำตอบ)</h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="checkbox">
+                            <input type="checkbox" name="live_with" value="คู่สมรส">
+                            คู่สมรส
+                        </label></div>
+                        <div class="column"><label class="checkbox">
+                            <input type="checkbox" name="live_with" value="บุตร">
+                            บุตร
+                        </label></div>
+                        <div class="column"><label class="checkbox">
+                            <input type="checkbox" name="live_with" value="หลาน">
+                            หลาน
+                        </label></div>
+                        <div class="column"><label class="checkbox">
+                            <input type="checkbox" name="live_with" value="ญาติ">
+                            ญาติ
+                        </label></div>
+                        <div class="column"><label class="checkbox">
+                            <input type="checkbox" name="live_with" value="อยู่คนเดียว">
+                            อยู่คนเดียว
+                        </label></div>
+                        <div class="column"><label class="checkbox">
+                            <input type="checkbox" name="live_with" value="อื่นๆ โปรดระบุ">
+                            อื่นๆ โปรดระบุ
+                            <input class="input" type="text" placeholder="อาศัยอยู่กับ" name="live_with_detail">
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="field">
+                <h2><strong>6. ผู้ดูแลหลัก</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="guardian" value="คู่สมรส" required>
+                            คู่สมรส
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="guardian" value="บุตร" required>
+                            บุตร
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="guardian" value="หลาน" required>
+                            หลาน
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="guardian" value="ญาติ" required>
+                            ญาติ
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="guardian" value="ไม่มีผู้ดูแล" required>
+                            ไม่มีผู้ดูแล
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="guardian" value="อื่นๆ โปรดระบุ" required>
+                            อื่นๆ โปรดระบุ
+                            <input class="input" type="text" placeholder="อาศัยอยู่กับ" name="guardian_detail">
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>7. อาชีพหลัก</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="occupation" value="รับจ้าง" required>
+                            รับจ้าง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="occupation" value="ค้าขายหรือทำธุรกิจ" required>
+                            ค้าขายหรือทำธุรกิจ
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="occupation" value="เกษตรกรรม" required>
+                            เกษตรกรรม
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="occupation" value="แม่บ้านหรือไม่ได้ประกอบอาชีพ" required>
+                            แม่บ้านหรือไม่ได้ประกอบอาชีพ
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="occupation" value="อื่นๆ" required>
+                            อื่นๆ
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="field">
+                <h2><strong>8. รายได้เฉลี่ยของท่านต่อเดือน</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="income_avg" value="น้อยกว่า 5,000 บาทต่อเดือน" required>
+                            น้อยกว่า 5,000 บาทต่อเดือน
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="income_avg" value="5,001-10,000 บาทต่อเดือน" required>
+                            5,001-10,000 บาทต่อเดือน
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="income_avg" value="10,001-15,000 บาทต่อเดือน" required>
+                            10,001-15,000 บาทต่อเดือน
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="income_avg" value="มากกว่า 15,000 บาทต่อเดือน" required>
+                            มากกว่า 15,000 บาทต่อเดือน
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="field">
+                <h2><strong>9. ท่านมีโรคประจำตัวหรือไม่</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="chronic_dis" value="มี" required>
+                            มี
+                            <input class="input" type="text" placeholder="ระบุโรคประจำตัว" name="chronic_dis_detail">
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="chronic_dis" value="ไม่มี" required>
+                            ไม่มี
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="field">
+                <h2><strong>10. ระยะเวลาที่ท่านทราบว่าเป็น</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="chronic_dis_time" value="ระยะเวลาการป่วยมาแล้ว 1-2 ปี">
+                            ระยะเวลาการป่วยมาแล้ว 1-2 ปี
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="chronic_dis_time" value="ระยะเวลาการป่วย 3-4 ปี">
+                            ระยะเวลาการป่วย 3-4 ปี
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="chronic_dis_time" value="ระยะเวลาการป่วย 5-6 ปี">
+                            ระยะเวลาการป่วย 5-6 ปี
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="chronic_dis_time" value="ป่วยมาแล้วมากกว่า 6 ปี">
+                            ป่วยมาแล้วมากกว่า 6 ปี
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="field">
+                <h2><strong>11. จำนวนชนิดยาที่รับประทานใน 1วัน</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="medi_number" value="1 ชนิด">
+                            1 ชนิด
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="medi_number" value="2 ชนิด">
+                            2 ชนิด
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="medi_number" value="3 ชนิด">
+                            3 ชนิด
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="medi_number" value="4 ชนิด">
+                            4 ชนิด
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="medi_number" value="มากกว่า 4 ชนิด">
+                            มากกว่า 4 ชนิด
+                            <input class="input" type="text" placeholder="โปรดระบุ" name="medi_detail" maxlength="255">
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>12. จำนวนชนิดยาลดความดันโลหิตสูงที่รับประทานใน 1วัน</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="hyperventi_medi" value="1 ชนิด">
+                            1 ชนิด
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="hyperventi_medi" value="2 ชนิด">
+                            2 ชนิด
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="hyperventi_medi" value="3 ชนิด">
+                            3 ชนิด
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="hyperventi_medi" value="4 ชนิด">
+                            4 ชนิด
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="hyperventi_medi" value="มากกว่า 4 ชนิด">
+                            มากกว่า 4 ชนิด
+                            <input class="input" type="text" placeholder="โปรดระบุ" name="hyperventi_detial">
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <hr>
+
+
+            <div class="field">
+                <h2><strong>13. ท่านเคยมีประวัติหกล้มหรือไม่</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="fall_hist" value="เคย" required>
+                            เคย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="fall_hist" value="ไม่เคย" required>
+                            ไม่เคย
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <section class="hero is-light">
+                <div class="hero-body">
+                    <div class="container">
+                        <h2 class="subtitle">
+                            แบบประเมินความเสี่ยงต่อการพลัดตกหกล้มในผู้สูงอายุ
+                        </h2>
+                    </div>
+                </div>
+            </section>
+            
+            <hr>
+
+            <div class="field">
+                <h2><strong>14. การมองเห็นบกพร่อง</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="eye_sight" value="บกพร่อง" required>
+                            ไม่สามารถอ่านตัวเลขที่ระยะ /12 เมตร ได้มากกว่าครึ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="eye_sight" value="ไม่บกพร่อง" required>
+                            อ่านตัวเลขที่ระยะ /12 เมตร ได้มากกว่าครึ่ง
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>15. การทรงตัวบกพร่อง</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="balancing" value="บกพร่อง" required>
+                            ยืนต่อเท้าเป็นเส้นตรงไม่ได้ หรือยืนได้ไม่ถึง 10 วินาที
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="balancing" value="ไม่บกพร่อง" required>
+                            ยืนต่อเท้าเป็นเส้นตรงไม่ได้ หรือยืนได้ไม่ถึง 10 วินาที
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="field">
+                <h2><strong>16. การใช้ยา</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="medication" value="บกพร่อง" required>
+                            กินยาต่อไปนี้ตั้งแต่ 1 ชนิดขึ้นไป ได้แก่ ยานอนหลับ ยากล่อมประสาท ยาลดความดันโลหิต ยาขับปัสสาวะ หรือกินยาชนิดใดก็ได้ ตั้งแต่ 4 ชนิดขึ้นไป (ไม่รวมวิตามิน)
+
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="medication" value="ไม่บกพร่อง" required>
+                            ไม่กินยาต่อไปนี้ ได้แก่ ยานอนหลับ ยากล่อมประสาท ยาลดความดันโลหิต ยาขับปัสสาวะหรือกินยาชนิดใดก็ได้ แต่น้อยกว่า 4 ชนิด
+
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>17. ประวัติการหกล้ม</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="falling" value="มีความเสี่ยง" required>
+                           มีประวัติหกล้มตั้งแต่ 2 ครั้งขึ้นไปในรอบ 6 เดือนที่ผ่านมา
+
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="falling" value="ไม่มีความเสี่ยง" required>
+                            ไม่มี
+
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>18. สภาพบ้าน ที่อยู่อาศัย</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="home" value="มีความเสี่ยง" required>
+                           อยู่บ้านยกพื้นสูงตั้งแต่ 1.5 เมตรขึ้นไป หรือบ้าน 2 ชั้น ต้องขึ้นลงโดยใช้บันได
+
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="home" value="ไม่มีความเสี่ยง" required>
+                            ไม่ได้อยู่บ้านลักษณะดังกล่าว
+                        </label></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <nav class="level">
+                <div class="level-right"></div>
+                <p class="level-item"><input class="button is-success" type="submit" value="ส่งคำตอบส่วนที่ 1"></p>
+            </nav>
+        </form>
+    </div>
+
+</section>
+</body>
+</html>

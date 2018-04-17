@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <title>แบบสอบถามส่วนที่ 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+<form action='quest_1' method="post">
+    {% csrf_token %}
+    {{ form }}
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    แบบสอบถามส่วนที่ 2
+                </h1>
+
+                <h2 class="subtitle">
+                    การรับรู้ความรุนแรงของการหกล้มที่ส่งผลให้ผู้สูงอายุมีพฤติกรรมป้องกันการหกล้ม
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <p class="subtitle">
+                โปรดอ่านคำถามแต่ละข้ออย่างละเอียด
+                และเมื่อท่านได้อ่านคำถามแล้วกรุณาตอบคำถามตามความเป็นจริงที่ตรงกับความเชื่อ ความรู้สึก หรือความเข้าใจ
+                ของท่านมากที่สุด
+                โดยให้ท่านเลือกเพียงคำตอบเดียวที่ตรงกับความเป็นจริงมากที่สุด คำตอบมีเกณฑ์ดังนี้
+            </p>
+        </div>
+        <br>
+        <div class="container">
+            <div class="content">
+                <div class="subtitle">
+                    <dl>
+                        <dd><strong>เห็นด้วยอย่างยิ่ง</strong> หมายถึง
+                            ผู้ตอบเห็นว่าข้อความในประโยคนั้นตรงกับความคิดเห็นของตนเองมากที่สุด
+                        </dd>
+                        <dd>
+                            <strong>เห็นด้วย </strong> หมายถึง ผู้ตอบเห็นว่าข้อความในประโยคนั้นตรงกับความคิดเห็นของตนเอง
+                        </dd>
+                        <dd><strong>เห็นด้วยปานกลาง</strong> หมายถึง
+                            ผู้ตอบเห็นว่าข้อความในประโยคนั้นตรงกับความคิดเห็นของตนเองในระดับปานกลาง
+                        </dd>
+                        <dd><strong>ไม่เห็นด้วย</strong> หมายถึง ข้อความในคำถามนั้นไม่ตรงกับความคิดเห็นของท่าน</dd>
+                        <dd><strong>ไม่เห็นด้วยอย่างยิ่ง</strong> หมายถึง
+                            ข้อความในคำถามนั้นไม่ตรงกับความคิดเห็นของท่านมากที่สุด
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+
+
+        <section class="hero is-light">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        ตอนที่ 1
+                    </h1>
+                    <h2 class="subtitle">
+                        การรับรู้ความรุนแรงของการหกล้ม
+                    </h2>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="field">
+                <h2><strong>1. การหกล้มอาจทำให้กระดูกหักได้</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA1" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA1" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA1" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA1" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA1" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>2. ถ้าท่านหกล้มศีรษะกระแทกพื้นทำให้ได้รับบาดเจ็บรุนแรงถึงขั้นเสียชีวิตได้</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA2" required value="5">
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA2" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA2" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA2" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA2" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <div class="field">
+                <h2><strong>3. หากท่านไม่จัดการสิ่งกีดขวางเกะกะทางเดิน เช่น สายไฟ ข้าวของ เครื่องใช้ ภายในบ้าน
+                    อาจทำให้ท่านพิการจากการหกล้มได้</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA3" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA3" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA3" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA3" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA3" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <div class="field">
+                <h2><strong>4. หากท่านไม่จัดการสิ่งแวดล้อมภายในบ้าน เช่น ราวจับ ประตู ทางลาด
+                    จะทำให้ท่านหกล้มเกิดการบาดเจ็บศีรษะกระแทกพื้นและมีโอกาสเสียชีวิตได้</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA4" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA4" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA4" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA4" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA4" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>5.
+                    หากท่านไม่ปฏิบัติท่ากายบริหารเพื่อความแข็งแรงของกล้ามเนื้อจะทำให้หกล้มศีรษะกระแทกพื้นเป็นอัมพาตได้ง่าย</strong>
+                </h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA5" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA5" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA5" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA5" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA5" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>6.
+                    หากท่านไม่ปฏิบัติตัวตามคำแนะนำของบุคลากรทางการแพทย์ในการป้องกันการหกล้มจะทำให้ท่านหกล้มกระดูกสะโพกหัก</strong>
+                </h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA6" value="5"  required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA6" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA6" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA6" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QA6" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+        </div>
+    </section>
+
+    <section class="hero is-light">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    ตอนที่ 2
+                </h1>
+                <h2 class="subtitle">
+                    การรับรู้โอกาสเสี่ยงของการหกล้ม
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="field">
+                <h2><strong>1. ท่านเชื่อว่าการหกล้มเกิดจากการไม่จัดการสิ่งแวดล้อมภายในบ้าน </strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB1" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB1" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB1" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB1" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB1" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>2. ท่านเชื่อว่าการหกล้มเกิดจากกล้ามเนื้อไม่แข็งแรงเนื่องจากไม่ปฏิบัติท่ากายบริหาร </strong>
+                </h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB2" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB2" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB2" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB2" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB2" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <div class="field">
+                <h2><strong>3. พื้นห้องน้ำห้องส้วมที่บ้านเปียกอาจจะทำให้ท่านหกล้มได้ง่าย</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB3" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB3" value="4" required >
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB3" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB3" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB3" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <div class="field">
+                <h2><strong>4. แสงสว่างที่บ้านไม่เพียงพอโดยเฉพาะบริเวณบันได ห้องน้ำ ทำให้เสี่ยงต่อการหกล้มได้</strong>
+                </h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB4" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB4" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB4" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB4" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB4" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>5. การที่บ้านท่านไม่มีการจัดการสิ่งแวดล้อม เช่น ราวจับ ประตู ทางลาด
+                    ทำให้เสี่ยงต่อการหกล้มได้ง่าย</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB5" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB5" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB5" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB5" value="2" required >
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB5" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>6. การที่ภายในบ้านมีสิ่งกีดขวาง เกะกะทางเดิน เช่น สายไฟ ข้าวของ
+                    เครื่องใช้ทำให้เสี่ยงต่อการหกล้มได้ง่าย</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB6" value="5" required>
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB6" value="4" required>
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB6" value="3" required>
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB6" value="2" required>
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QB6" value="1" required>
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+
+        </div>
+        <div class="field">
+            <div class="control">
+                <nav class="level">
+                    <p class="level-item has-text-centered">
+                        <label class="checkbox">
+                            <input type="checkbox" value={{ user_id }} name="id" required>
+                            ยืนยันคำตอบ
+                        </label>
+                    </p>
+
+                </nav>
+            </div>
+        </div>
+        <nav class="level">
+            <div class="level-right"></div>
+            <p class="level-item"><input class="button is-success is-centered" type="submit" value="ส่งคำตอบส่วนที่ 2">
+            </p>
+        </nav>
+    </section>
+</form>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <title>อินโฟกราฟฟิคที่ 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<form action='infographic' method="post">
+    {% csrf_token %}
+    {{ form }}
+    <section class="hero is-warning">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    อินโฟกราฟฟิค ชุดที่ 1
+                </h1>
+                <h2 class="subtitle">
+                    ลักษณะบ้าน ที่อยู่สำหรับผู้สูงอายุ
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <figure class="image">
+                {% load static %}
+                <img src="{% static "home_for_elderly.jpg" %}" alt="My image">
+            </figure>
+        </div>
+        <br>
+
+        <div class="field">
+            <div class="control">
+                <nav class="level">
+                    <p class="level-item has-text-centered">
+                        <label class="checkbox">
+                            <input type="checkbox" value={{ user_id }} name="user_id" required>
+                            ฉันเข้าใจเนื้อหาในวิดีโอ
+                        </label>
+                    </p>
+
+                </nav>
+            </div>
+        </div>
+        <p class="level-item"><input class="button is-success is-centered" type="submit" value="ไปต่อ"></p>
+        <br>
+    </section>
+</form>
+</body>
+</html>

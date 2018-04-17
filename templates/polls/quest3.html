@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <title>แบบสอบถามส่วนที่ 4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                แบบสอบถามส่วนที่ 4
+            </h1>
+
+            <h2 class="subtitle">
+                การรับรู้ความรุนแรงของการหกล้มที่ส่งผลให้ผู้สูงอายุมีพฤติกรรมป้องกันการหกล้ม (ต่อ)
+            </h2>
+        </div>
+    </div>
+</section>
+
+<section>
+
+    <section class="hero is-light">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    ตอนที่ 4
+                </h1>
+                <h2 class="subtitle">
+                    ความคาดหวังในความสามารถของตน
+                </h2>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="section">
+    <form action="quest_4" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <div class="container">
+            <div class="field">
+                <h2><strong>1. ท่าน<u>สามารถ</u>ทำท่ากายบริหารเป็นประจำได้ </strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD1" required value="5">
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD1" required value="4">
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD1" required value="3">
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD1" required value="2">
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD1" required value="1">
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>2. ท่าน<u>สามารถ</u>จัดการภายในบ้านไม่ให้มีสิ่งกีดขวาง เกะกะทางเดิน เช่น สายไฟ ข้าวของ
+                    เครื่องใช้ได้</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD2" required value="5">
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD2" required value="4">
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD2" required value="3">
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD2" required value="2">
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD2" required value="1">
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <div class="field">
+                <h2><strong>3. ท่าน<u>สามารถ</u>จัดการให้ที่บ้านมีแสงสว่างเพียงพอได้ โดยเฉพาะบริเวณบันได
+                    ห้องน้ำ</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD3" required value="5">
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD3" required value="4">
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD3" required value="3">
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD3" required value="2">
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD3" required value="1">
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <div class="field">
+                <h2><strong>4. ท่าน<u>สามารถ</u>ปฏิบัติพฤติกรรมการป้องกันการพลัดตกหกล้มได้ตามคำแนะนำของบุคลากรทางการแพทย์</strong>
+                </h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD4" required value="5">
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD4" required value="4">
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD4" required value="3">
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD4" required value="2">
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD4" required value="1">
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="field">
+                <h2><strong>5. ท่าน<u>สามารถ</u>ป้องกันการหกล้มด้วยการจัดการสิ่งแวดล้อมภายในบ้าน เช่น ราวจับ ประตู
+                    ทางลาด</strong></h2>
+                <div class="control">
+                    <div class="columns">
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD5" required value="5">
+                            เห็นด้วยอย่างยิ่ง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD5" required value="4">
+                            เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD5" required value="3">
+                            เห็นด้วยปานกลาง
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD5" required value="2">
+                            ไม่เห็นด้วย
+                        </label></div>
+                        <div class="column"><label class="radio">
+                            <input type="radio" name="QD5" required value="1">
+                            ไม่เห็นด้วยอย่างยิ่ง
+                        </label></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <nav class="level">
+                    <p class="level-item has-text-centered">
+                        <label class="checkbox">
+                            <input type="checkbox" value={{ user_id }} name="user_id" required>
+                            ยืนยันคำตอบ
+                        </label>
+                    </p>
+
+                </nav>
+            </div>
+        </div>
+
+        <nav class="level">
+            <div class="level-right"></div>
+            <p class="level-item"><input class="button is-success is-centered" type="submit" value="ส่งคำตอบส่วนที่ 4">
+            </p>
+        </nav>
+    </form>
+</section>
+</body>
+</html>
