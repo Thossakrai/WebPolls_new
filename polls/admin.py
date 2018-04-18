@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ScoreCard, UserProfile, AnswerSheetA, AnswerSheetB, AnswerSheetC, AnswerSheetD, AnswerSheetE
+from .models import ScoreCard, UserProfile, AnswerSheetA, AnswerSheetB, AnswerSheetC, AnswerSheetD, AnswerSheetE, Risk
 
 
 class UserAdmin(admin.ModelAdmin):
@@ -22,22 +22,31 @@ class AnswerB_Admin(admin.ModelAdmin):
 
 
 class AnswerC_Admin(admin.ModelAdmin):
-    list_display = ('user_id', 'qc1', 'qc2', 'qc3', 'qc4', 'qc5','qc6',)
-    list_filter = ('qc1', 'qc2', 'qc3', 'qc4', 'qc5','qc6',)
+    list_display = ('user_id', 'qc1', 'qc2', 'qc3', 'qc4', 'qc5', 'qc6',)
+    list_filter = ('qc1', 'qc2', 'qc3', 'qc4', 'qc5', 'qc6',)
     search_fields = ('user_id',)
+
 
 class AnswerD_Admin(admin.ModelAdmin):
     list_display = ('user_id', 'qd1', 'qd2', 'qd3', 'qd4', 'qd5',)
     list_filter = ('qd1', 'qd2', 'qd3', 'qd4', 'qd5',)
     search_fields = ('user_id',)
 
+
 class AnswerE_Admin(admin.ModelAdmin):
     list_display = ('user_id', 'qe1', 'qe2', 'qe3', 'qe4', 'qe5',)
     list_filter = ('qe1', 'qe2', 'qe3', 'qe4', 'qe5',)
     search_fields = ('user_id',)
 
+
 class ScoreCard_Admin(admin.ModelAdmin):
     list_display = ('user_id', 'profile', 'quest_A', 'quest_B', 'quest_C', 'quest_D', 'quest_E', 'finished',)
+    search_fields = ('user_id',)
+
+
+class Risk_Admin(admin.ModelAdmin):
+    list_display = ('user_id', 'eye_sight', 'balancing', 'medication',
+                    'home', 'score',)
     search_fields = ('user_id',)
 
 
@@ -49,3 +58,4 @@ admin.site.register(AnswerSheetC, AnswerC_Admin)
 admin.site.register(AnswerSheetD, AnswerD_Admin)
 admin.site.register(AnswerSheetE, AnswerE_Admin)
 admin.site.register(ScoreCard, ScoreCard_Admin)
+admin.site.register(Risk, Risk_Admin)
